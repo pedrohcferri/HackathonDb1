@@ -1,0 +1,28 @@
+{
+    "promotions":[
+        {
+            "id":     ,
+            "nome":   ,
+            "preco":  ,
+            "imageUrl":   
+        },
+        {
+            "id":     ,
+            "nome":   ,
+            "preco":  ,
+            "imageUrl":  
+        },
+        {
+            "id":     ,
+            "nome":   ,
+            "preco":  ,
+            "imageUrl":   
+        },
+        {
+            "id":     ,
+            "nome":   ,
+            "preco":  ,
+            "imageUrl"   
+        }
+    ]
+}
