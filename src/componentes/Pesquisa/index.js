@@ -6,8 +6,8 @@ const PesquisaContainer = styled.section`
     align-items: center;
     color: black;
     text-align: center;
-    padding: 2rem 10rem;
-    height:10rem;
+    padding: 2rem 2rem 2rem 34rem;
+    height:20px;
     width: 100%;
 `
 
@@ -20,8 +20,8 @@ const Titulo = styled.h2`
 function Pesquisa (){
     return(
         <PesquisaContainer>
-            <Titulo>Encontre aqui!</Titulo>
-            <Input placeholder="Procurar!"/>
+            {/* <Titulo>Encontre aqui!</Titulo> */}
+            <Input placeholder="ENCONTRE AQUI!"/>
         </PesquisaContainer>
     )
 }
