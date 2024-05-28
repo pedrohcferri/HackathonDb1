@@ -18,8 +18,8 @@ function App() {
   return (
     <AppContainer>
      <Header />
-     <Pesquisa></Pesquisa>
      <MyCarousel/>
+     <Pesquisa></Pesquisa>
     </AppContainer>
   );
 }
