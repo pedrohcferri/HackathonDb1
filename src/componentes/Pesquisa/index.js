@@ -1,15 +1,15 @@
 import Input from "../Input"
 import styled from "styled-components"
 import { useState} from 'react'
-// import { produtos} from'./dadosPesquisa'
+import { produtos} from'./dadosPesquisa'
 
 const PesquisaContainer = styled.section`
     color: #0b0b0cf6;
     text-align: center;
-    padding: 30px 10px;
     height: 470px;
-    width: 100%;
+   
     flex-direction:column;
+    padding: 30px 10px;
 `
 
 const Titulo = styled.h2`
@@ -24,17 +24,35 @@ const Paragrafo = styled.p`
     display: flex;
     color: black;
     width: 30%;
-
 `
+
+const ContainerPesquisa = styled.div`
+    display: flex;
+    flex-direction: row;
+`
+
 function Pesquisa (){
-    const  [textoDigitado, setTextoDigitado]= useState('')
+    const  [produtosPesquisados, setProdutosPesquisados]= useState([])
+
+    console.log(produtosPesquisados)
+
     return(
         <PesquisaContainer>
-            <Titulo>Encontre aqui!</Titulo>
-            <Input placeholder="ENCONTRE AQUI!"
-            onBlur = { evento => setTextoDigitado(evento.target.value) }
+           <Titulo>Encontre aqui!</Titulo>
+                <Input placeholder="ENCONTRE AQUI!"
+            onBlur = { evento => {
+                const produtosPesquisados = evento.target.value
+                const resultadoPesquisa = produtos.filter( produto => produto.nome.includes(produtosPesquisados))
+                setProdutosPesquisados(resultadoPesquisa)
+            } }
             />
-             <Paragrafo>{textoDigitado}</Paragrafo>
+            {produtosPesquisados.map(produto =>(
+                <ContainerPesquisa>
+                    <img src={produto.src} width='250px' height='250px' />
+                    <p>{produto.nome}</p>   
+                </ContainerPesquisa>    
+        ))}
+            
         </PesquisaContainer>
     )
 }
