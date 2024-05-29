@@ -1,9 +1,12 @@
 import tenis_adidas from '../../imagensProdutos/tenis_adidas.png'
 import camiseta from '../../imagensProdutos/camiseta.png'
-import jaqueta_Colorblock_Amarelo from '../../imagensProdutos/Jaqueta_Colorblock_Amarelo.png'
-import moletom_Capuz_Zebra from '../../imagensProdutos/Moletom_Capuz_Zebra.png'
-import camisa_Argentina from '../../imagensProdutos/Camisa_Argentina.png'
-import camisa_Manchester from '../../imagensProdutos/Camisa_Manchester.png'
+import jaqueta_Colorblock_Amarelo from '../../imagensProdutos/jaqueta_Colorblock_Amarelo.png'
+import moletom_Capuz_Zebra from '../../imagensProdutos/moletom_Capuz_Zebra.png'
+import camisa_Argentina from '../../imagensProdutos/camisa_Argentina.png'
+import camisa_Manchester from '../../imagensProdutos/camisa_Manchester.png'
+import styled from 'styled-components';
+
+
 
 export const produtos = [
     {
