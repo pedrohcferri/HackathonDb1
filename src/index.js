@@ -26,28 +26,28 @@ li{
   list-style: none;
 }
 // `
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <GlobalStyle />
-//     <BrowserRouter>
-//       <Header />
-//       <Routes>
-//       <Route path="/categorias" element={<Categorias />} />
-//         <Route path="/favoritos" element={<Favoritos/>} />
-//         <Route path="/" element={<App />} />
-//       </Routes>
-//     </BrowserRouter>
-//   </React.StrictMode>);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle/>
-    <App />
-    <route path='/categorias' element={<Categorias/>} />
-  </React.StrictMode>
-);
+    <GlobalStyle />
+    <BrowserRouter>
+    
+      <Routes>
+      <Route path="/categorias" element={<Categorias />} />
+        <Route path="/favoritos" element={<Favoritos/>} />
+        <Route path="/" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>);
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <GlobalStyle/>
+//     <App />
+//     <route path='/categorias' element={<Categorias/>} />
+//   </React.StrictMode>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

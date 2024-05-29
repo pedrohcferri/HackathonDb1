@@ -40,7 +40,7 @@ const TituloInput = styled.div`
 `
 
 function Pesquisa(){
-    const  [produtosPesquisados, setProdutosPesquisados]= useState([])
+    const  [produtosPesquisados, setProdutosPesquisados]= useState(produtos)
 
     console.log(produtosPesquisados)
 
