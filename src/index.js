@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './routes/App';
+import Favoritos from './routes/Favoritos';
+import Header from './componentes/Header/index';
+import Categorias from'./routes/Categorias';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 
@@ -21,14 +25,27 @@ code {
 li{
   list-style: none;
 }
-`
-
+// `
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <GlobalStyle />
+//     <BrowserRouter>
+//       <Header />
+//       <Routes>
+//       <Route path="/categorias" element={<Categorias />} />
+//         <Route path="/favoritos" element={<Favoritos/>} />
+//         <Route path="/" element={<App />} />
+//       </Routes>
+//     </BrowserRouter>
+//   </React.StrictMode>);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle/>
     <App />
+    <route path='/categorias' element={<Categorias/>} />
   </React.StrictMode>
 );
 
