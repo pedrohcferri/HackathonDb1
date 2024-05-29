@@ -4,7 +4,7 @@ import jaqueta_Colorblock_Amarelo from '../../imagensProdutos/jaqueta_Colorblock
 import moletom_Capuz_Zebra from '../../imagensProdutos/moletom_Capuz_Zebra.png'
 import camisa_Argentina from '../../imagensProdutos/camisa_Argentina.png'
 import camisa_Manchester from '../../imagensProdutos/camisa_Manchester.png'
-import styled from 'styled-components';
+
 
 
 

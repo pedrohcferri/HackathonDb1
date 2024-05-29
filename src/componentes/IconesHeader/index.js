@@ -1,4 +1,3 @@
-
 import perfil from '../../imagens/perfil.svg';
 import sacola from '../../imagens/sacola.svg';
 import styled from 'styled-components';
@@ -21,7 +20,7 @@ function IconesHeader (){
     return (
         <Icones>
           { icones.map((icone)=> (
-            <Icone><img src={icone}></img></Icone>
+            <Icone><img src={icone} alt='icones'></img></Icone>
           ))}
         </Icones>
     )
