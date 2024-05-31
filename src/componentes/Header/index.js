@@ -9,15 +9,21 @@ const HeaderContainer = styled.header`
         display: flex;
         justify-content: space-around; 
 `
-
+const Separar=styled.div`
+ display:flex;
+ justify-content: center;
+;
+`
 function Header(){
     return (
         <HeaderContainer>
             <Link to="/">
             <Logo/>      
                 </Link>
+           <Separar>
             <OpcoesHeader/>
             <IconesHeader/>
+           </Separar>
         </HeaderContainer>
     )
 }
