@@ -1,6 +1,7 @@
-import Input from "../Input"
+// import Input from "../Input"
 import { useState} from 'react'
 import { produtos} from'./dadosPesquisa'
+import {Input, Button} from'antd'
 import styled from "styled-components"
 
 const PesquisaContainer = styled.section`
@@ -34,21 +35,34 @@ const ContainerPesquisa = styled.div`
 `
 
 const TituloInput = styled.div`
-    border: 1   px black;
+    aling-itens: center;
+    justify-content: center;
+    padding: 10px;
     display: flex;
     width: 100vw;
 `
-
+const BotaoPesquisar = styled(Input)`
+    display:flex;
+    text-decoration: none;
+    color: #100f0f;
+    width: 40vw;
+    height: 6vh;
+    border-color: #100f0f;
+    hover: none;
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+`
 function Pesquisa(){
     const  [produtosPesquisados, setProdutosPesquisados]= useState(produtos)
 
     console.log(produtosPesquisados)
+    
 
     return(
         <PesquisaContainer>
             <TituloInput>
-                <Titulo>Encontre aqui!</Titulo>
-                        <Input placeholder="ENCONTRE AQUI!"
+                {/* <Titulo>Encontre aqui!</Titulo> */}
+                        <BotaoPesquisar placeholder="ENCONTRE AQUI!"
                     onBlur = { evento => {
                         const produtosPesquisados = evento.target.value
                         const resultadoPesquisa = produtos.filter( produto => produto.nome.includes(produtosPesquisados))
@@ -61,8 +75,8 @@ function Pesquisa(){
                     <ol>
                         <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
-                        <li> <p>${produto.valor}</p> </li>
-                        <li> <button>Detalhes</button> </li>
+                        <li> <p>R$:{produto.valor}</p> </li>
+                        <li> <Button>Detalhes</Button> </li>
                     </ol>
                 </ContainerPesquisa>    
         ))}

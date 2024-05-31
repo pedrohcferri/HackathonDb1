@@ -17,7 +17,7 @@ function Logo(){
     return (
         <LogoContainer>
           <LogoImg src={logo} alt='NX logo da empresa' className='imglogo'/>
-          <p><strong>Net</strong>Xoes</p>
+          
         </LogoContainer>
     );
 }

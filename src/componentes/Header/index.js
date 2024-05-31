@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const HeaderContainer = styled.header`
         background-color: #0b0b0cf6;
         display: flex;
-        justify-content: center; 
+        justify-content: space-around; 
 `
 
 function Header(){
