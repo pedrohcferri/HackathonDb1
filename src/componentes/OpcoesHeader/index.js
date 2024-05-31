@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const textoOpcoes = ['CATEGORIAS', 'FAVORITOS',  ];
+const textoOpcoes = ['PRODUTOS', 'FAVORITOS',  ];
 
 const Opcao = styled.li`
     color: #fff;

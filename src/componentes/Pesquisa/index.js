@@ -31,6 +31,7 @@ const Titulo = styled.h2`
 
 const ContainerPesquisa = styled.div`
     display: flex;
+    padding:10px;
 
 `
 
@@ -52,6 +53,12 @@ const BotaoPesquisar = styled(Input)`
     .ant-checkbox:hover .ant-checkbox-inner,
     .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 `
+
+const ListaProdutos= styled.ol`
+padding: 10px 10px;
+
+justify-content:center;
+`
 function Pesquisa(){
     const  [produtosPesquisados, setProdutosPesquisados]= useState(produtos)
 
@@ -72,12 +79,12 @@ function Pesquisa(){
             </TituloInput>
             {produtosPesquisados.map(produto =>(
                 <ContainerPesquisa>
-                    <ol>
+                    <ListaProdutos>
                         <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
                         <li> <p>R$:{produto.valor}</p> </li>
-                        <li> <Button>Detalhes</Button> </li>
-                    </ol>
+                        <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes</Button> </li>
+                    </ListaProdutos>
                 </ContainerPesquisa>    
         ))}
             

@@ -10,7 +10,7 @@ const AppContainer = styled.div`
     color: #fff;
 `
 
-function Categorias() {
+function Produtos() {
   return (
     <AppContainer>
      <Header />
@@ -21,4 +21,4 @@ function Categorias() {
 }
 
 
-export default Categorias;
+export default Produtos;

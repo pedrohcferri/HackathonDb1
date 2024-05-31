@@ -9,6 +9,7 @@ const Icone = styled.li`
 `
 const Icones = styled.ul`
   display: flex;
+  
   color: #fff;
   align-items: center;
 

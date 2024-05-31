@@ -2,6 +2,7 @@ import React from 'react';
 import { produtos} from'../Pesquisa/dadosPesquisa';
 import styled from "styled-components"
 import {Button} from'antd'
+import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
 
 const ContainerPesquisa = styled.div`
     display: flex;
@@ -12,6 +13,11 @@ const ContainerPesquisa = styled.div`
     overflow-y: auto;
 
 `
+const ListaProdutos= styled.ol`
+padding: 10px 10px;
+
+justify-content:center;
+`
 
 function ProdutosCarousel(){
 
@@ -19,12 +25,12 @@ function ProdutosCarousel(){
         <ContainerPesquisa>
             {produtos.map(produto =>(
           
-                    <ol>
+                    <ListaProdutos>
                         <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
                         <li> <p>R${produto.valor}</p> </li>
-                        <li> <Button>Detalhes</Button> </li>
-                    </ol>
+                        <li> <Button>Detalhes</Button> < StarOutlined twoToneColor="#eb2f96" /> </li>
+                    </ListaProdutos>
            
             ))}  
             </ContainerPesquisa>
