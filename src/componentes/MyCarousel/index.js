@@ -4,10 +4,14 @@ import { Carousel } from 'antd';
 import adidas from '../../imagenscarousel/adidas.jpg';
 import outono from '../../imagenscarousel/outono.jpg';
 import selecao from '../../imagenscarousel/selecao.jpg';
+import namorados from '../../imagenscarousel/namorados.jpg';
 import style from './style.module.css';
 
 const MyCarousel= () => (
   <Carousel autoplay>
+   <div>
+      <img src={namorados} alt='seleçaõ' className={style.imgContainer}></img>
+    </div>
     <div >
       <img src={adidas} alt='adidas' className={style.imgContainer}></img>
     </div>

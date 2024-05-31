@@ -2,6 +2,7 @@ import Header from '../componentes/Header';
 import styled from 'styled-components';
 import Pesquisa from '../componentes/Pesquisa';
 import MyCarousel from '../componentes/MyCarousel';
+import ProdutosCarousel from '../componentes/ProdutosCarousel';
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -16,8 +17,7 @@ function Favoritos() {
   return (
     <AppContainer>
      <Header />
-     <MyCarousel/>
-     <Pesquisa></Pesquisa>
+    <ProdutosCarousel></ProdutosCarousel>
     </AppContainer>
   );
 }

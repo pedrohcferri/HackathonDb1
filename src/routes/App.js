@@ -2,7 +2,7 @@ import Header from '../componentes/Header';
 import Pesquisa from '../componentes/Pesquisa';
 import MyCarousel from '../componentes/MyCarousel';
 import styled from 'styled-components';
-
+import ProdutosCarousel from '../componentes/ProdutosCarousel';
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -18,7 +18,7 @@ function App() {
     <AppContainer>
       <Header />
       <MyCarousel/>
-      <Pesquisa/>
+      <ProdutosCarousel/>
     </AppContainer>
   );
 }

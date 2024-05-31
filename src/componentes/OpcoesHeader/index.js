@@ -2,9 +2,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MEU CARRINHO' ];
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS',  ];
 
 const Opcao = styled.li`
+    color: #fff;
     font-size: 16px;
     align-items: center;
     display: flex;
@@ -19,12 +20,15 @@ const Opcao = styled.li`
 const Opcoes = styled.ul`
     display: flex;
 `
+const StyledLink = styled(Link)`
+    text-decoration: none;
+`
 
 function OpcoesHeader(){
     return (
         <Opcoes>
           {textoOpcoes.map((texto) => (
-          <Link to={`/${texto.toLowerCase()}`}><Opcao><p>{texto}</p></Opcao></Link>
+          <StyledLink to={`/${texto.toLowerCase()}`}><Opcao><p>{texto}</p></Opcao></StyledLink>
           ))}
         </Opcoes>
     )
