@@ -9,7 +9,11 @@ const AppContainer = styled.div`
     background-color: #fff;
     color: #fff;
 `
-
+const ListaProdutos= styled.ol`
+padding: 10px 10px;
+color:black;
+justify-content:center;
+`
 function Detalhes() {
     const parametro = useParams()
     // console.log(parametro)
@@ -18,7 +22,12 @@ function Detalhes() {
   return (
     <AppContainer>
      <Header />
-    <p>text{produtosSelecionados.valor}</p>
+     <ListaProdutos>
+        <img src={produtosSelecionados[0].src} alt={produtosSelecionados[0].nome} width='250px' height='250px' />
+        <li>   <p>{produtosSelecionados[0].nome}</p> </li>
+        <li> <p>R$:{produtosSelecionados[0].valor}</p> </li>
+
+     </ListaProdutos>
     </AppContainer>
   );
 }
