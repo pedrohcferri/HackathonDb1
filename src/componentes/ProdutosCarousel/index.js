@@ -2,7 +2,8 @@ import React from 'react';
 import { produtos} from'../Pesquisa/dadosPesquisa';
 import styled from "styled-components"
 import {Button} from'antd'
-import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
+import {HeartTwoTone} from '@ant-design/icons'
+
 
 const ContainerPesquisa = styled.div`
     display: flex;
@@ -18,6 +19,12 @@ padding: 10px 10px;
 
 justify-content:center;
 `
+const ListaDetalhes=styled.div`
+    gap:5px;
+    justify-content: center;
+    display:flex;
+    
+`
 
 function ProdutosCarousel(){
 
@@ -29,7 +36,10 @@ function ProdutosCarousel(){
                         <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
                         <li> <p>R${produto.valor}</p> </li>
-                        <li> <Button>Detalhes</Button> < StarOutlined twoToneColor="#eb2f96" /> </li>
+                        <ListaDetalhes>
+                                <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes</Button> </li>
+                                <li><Button href={`/produtos/${produto.id}/favoritos`}><HeartTwoTone/></Button></li>
+                        </ListaDetalhes>
                     </ListaProdutos>
            
             ))}  

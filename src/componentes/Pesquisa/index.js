@@ -2,6 +2,7 @@
 import { useState} from 'react'
 import { produtos} from'./dadosPesquisa'
 import {Input, Button} from'antd'
+import {HeartTwoTone} from '@ant-design/icons'
 import styled from "styled-components"
 
 const PesquisaContainer = styled.section`
@@ -15,13 +16,6 @@ const PesquisaContainer = styled.section`
    
 `
 
-const Titulo = styled.h2`
-    padding: 20px 10px
-    color: black;
-    font-size: 36px;
-    text-align: center;
-    width: 30%;
-`
 // const Paragrafo = styled.p`
 //     padding: 20px 10px
 //     display: flex;
@@ -59,6 +53,12 @@ padding: 10px 10px;
 
 justify-content:center;
 `
+const ListaDetalhes=styled.div`
+    gap:5px;
+    justify-content: center;
+    display:flex;
+    
+`
 function Pesquisa(){
     const  [produtosPesquisados, setProdutosPesquisados]= useState(produtos)
 
@@ -83,7 +83,10 @@ function Pesquisa(){
                         <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
                         <li> <p>R$:{produto.valor}</p> </li>
-                        <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes</Button> </li>
+                        <ListaDetalhes>
+                            <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes </Button> </li>
+                            <li><Button href={`/produtos/${produto.id}/favoritos`}><HeartTwoTone/></Button></li>
+                        </ListaDetalhes>
                     </ListaProdutos>
                 </ContainerPesquisa>    
         ))}

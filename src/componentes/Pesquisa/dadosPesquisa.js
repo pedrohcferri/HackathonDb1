@@ -69,3 +69,14 @@ export const produtos = [
         valor:550.90,   
     }
 ]
+
+export const random = produtos
+console.log(produtos);
+function getRandomInt(random, numItens) {
+    const arrayEmbaralhado = produtos.sort(() => 0.5 - Math.random())
+    return arrayEmbaralhado.slice(0, numItens);
+    
+    }
+    
+export let idAleatorio = getRandomInt(random, 6);
+console.log(idAleatorio)

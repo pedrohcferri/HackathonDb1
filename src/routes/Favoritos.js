@@ -1,8 +1,10 @@
 import Header from '../componentes/Header';
 import styled from 'styled-components';
-import Pesquisa from '../componentes/Pesquisa';
-import MyCarousel from '../componentes/MyCarousel';
-import ProdutosCarousel from '../componentes/ProdutosCarousel';
+import { produtos} from'../componentes/Pesquisa/dadosPesquisa'
+import { useParams } from 'react-router-dom';
+
+
+
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -13,11 +15,18 @@ const AppContainer = styled.div`
 
 `
 
+const ListaProdutos= styled.ol`
+padding: 10px 10px;
+color:black;
+justify-content:center;
+`
+
 function Favoritos() {
+
   return (
     <AppContainer>
      <Header />
-    <ProdutosCarousel></ProdutosCarousel>
+    
     </AppContainer>
   );
 }
