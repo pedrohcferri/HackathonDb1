@@ -8,6 +8,7 @@ const HeaderContainer = styled.header`
         background-color: #0b0b0cf6;
         display: flex;
         justify-content: space-around; 
+        overflow-y: auto;
 `
 const Separar=styled.div`
  display:flex;
