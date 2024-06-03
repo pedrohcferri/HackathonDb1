@@ -1,5 +1,4 @@
 import Header from '../componentes/Header';
-import Pesquisa from '../componentes/Pesquisa';
 import MyCarousel from '../componentes/MyCarousel';
 import styled from 'styled-components';
 import ProdutosCarousel from '../componentes/ProdutosCarousel';

@@ -33,7 +33,7 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <BrowserRouter>
-    
+
       <Routes>
       <Route path="/produtos" element={<Produtos />} />
         <Route path="/favoritos" element={<Favoritos/>} />
