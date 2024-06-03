@@ -1,8 +1,9 @@
 // import Input from "../Input"
-import { useState} from 'react'
-import { produtos} from'./dadosPesquisa'
+import { useEffect, useState} from 'react'
+// import { produtos} from'./dadosPesquisa'
 import {Input, Button} from'antd'
 import {HeartTwoTone} from '@ant-design/icons'
+import { getProdutos } from '../../servicos/produtos'
 import styled from "styled-components"
 
 const PesquisaContainer = styled.section`
@@ -60,9 +61,18 @@ const ListaDetalhes=styled.div`
     
 `
 function Pesquisa(){
-    const  [produtosPesquisados, setProdutosPesquisados]= useState(produtos)
+    const  [produtosPesquisados, setProdutosPesquisados]= useState([])
+    const  [produtos, setProdutos] = useState([])
+    // console.log(produtosPesquisados)
 
-    console.log(produtosPesquisados)
+    useEffect(()=>{
+       fetchProdutos()
+    }, [])
+
+    async function fetchProdutos(){
+        const produtosDaApi = await getProdutos()
+        setProdutos(produtosDaApi)
+    }
     
 
     return(
