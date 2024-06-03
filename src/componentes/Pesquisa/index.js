@@ -4,6 +4,9 @@ import { useEffect, useState} from 'react'
 import {Input, Button} from'antd'
 import {HeartTwoTone} from '@ant-design/icons'
 import { getProdutos } from '../../servicos/produtos'
+import {postFavorito} from '../../servicos/favoritos'
+import {getFavoritos} from'../../servicos/favoritos'
+import InsertFavorito from'../Favoritar/index'
 import styled from "styled-components"
 
 const PesquisaContainer = styled.section`
@@ -69,12 +72,13 @@ function Pesquisa(){
        fetchProdutos()
     }, [])
 
-    async function fetchProdutos(){
-        const produtosDaApi = await getProdutos()
-        setProdutos(produtosDaApi)
+    async function fetchProdutos() {
+        const produtosDaAPI = await getProdutos()
+        setProdutos(produtosDaAPI)
     }
     
-
+    
+    
     return(
         <PesquisaContainer>
             <TituloInput>
@@ -90,12 +94,12 @@ function Pesquisa(){
             {produtosPesquisados.map(produto =>(
                 <ContainerPesquisa>
                     <ListaProdutos>
-                        <li></li><img src={produto.src} alt={produto.name} width='250px' height='250px' />
+                        <li></li><img src={produto.imageUrl} alt={produto.name} width='250px' height='250px' />
                         <li>   <p>{produto.nome}</p> </li>
                         <li> <p>R$:{produto.valor}</p> </li>
                         <ListaDetalhes>
                             <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes </Button> </li>
-                            <li><Button href={`/produtos/${produto.id}/favoritos`}><HeartTwoTone/></Button></li>
+                            <li>  <InsertFavorito id={produto.id}/> </li>
                         </ListaDetalhes>
                     </ListaProdutos>
                 </ContainerPesquisa>    
